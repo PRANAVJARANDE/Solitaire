@@ -137,3 +137,69 @@ button{
     justify-content: center;
     background-color: #2e8b57
 }
+
+@media (max-width: 700px) {
+    #ubox{
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+@media (max-width: 620px) {
+    #ubox{
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 25px ;
+    }
+    #dbox{
+        zoom:0.9;
+    }
+}
+
+@media (max-width: 550px) {
+    #dbox{
+        zoom:0.8;
+    }
+}
+
+
+
+@media (max-width: 527px) {
+    #ubox{
+        zoom: 0.9;
+    }
+}
+
+@media (max-width: 477px) {
+    #ubox{
+        zoom: 0.8;
+    }
+}
+
+@media (max-width: 440px) {
+    #ubox{
+        zoom: 0.7;
+    }
+    .card{
+        zoom:0.9;
+    }
+    #viewcardbox{
+        zoom:0.9;
+    }
+    
+}
+
+@media (max-width: 430px) {
+    #dbox{
+        zoom: 0.7;
+    }
+}
+
+@media (max-width: 370px) {
+    #dbox{
+        zoom: 0.6;
+    }
+    #ubox{
+        zoom:0.64;
+    }
+}

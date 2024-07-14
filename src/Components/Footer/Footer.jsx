@@ -48,8 +48,8 @@ const Footer = () => {
           <span>Time: {formatTime(time)}</span>
         </div>
         <div className="footer-section">
-          <span>BEST :</span>
-          <span>Moves: {lbest.moves ? lbest.moves : 0}</span>
+          <div>BEST : </div>
+          <div>Moves: {lbest.moves ? lbest.moves : 0}</div>
           <span>Time: {formatTime(lbest.time)}</span>
         </div>
     </footer>

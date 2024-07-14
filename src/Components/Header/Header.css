@@ -54,3 +54,46 @@ img{
   font-weight: 800;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
+
+@media (max-width: 580px) {
+  .newgame{
+    zoom:0.9;
+  }
+}
+
+@media (max-width: 530px) {
+  .newgame{
+    zoom:0.8;
+  }
+}
+
+
+@media (max-width: 463px) {
+  .newgame{
+    width:7em;
+  }
+}
+
+@media (max-width: 408px) {
+  .newgame{
+    zoom:0.7;
+  }
+}
+
+@media (max-width: 430px) {
+  .newgame{
+    zoom:0.7;
+  }
+}
+
+@media (max-width: 380px) {
+  header{
+    zoom:0.9;
+  }
+}
+
+@media (max-width: 350px) {
+  header{
+    zoom:0.8;
+  }
+}

@@ -16,12 +16,49 @@ footer {
   display: flex;
   align-items: center;
   padding-right: 1.8em;
+  margin-left:1em;
+  margin-right:1em;
 }
 
 .footer-section span {
   margin-left: 1.5em;
 }
+.footer-section div {
+  margin-right: 10px;
+}
+
 
 .footer-section:first-child span:first-child {
   margin-left: 0;
 }
+
+@media (max-width: 805px) {
+  .footer-section{
+      zoom: 0.9;
+  }
+}
+
+@media (max-width: 728px) {
+  .footer-section{
+      zoom: 0.8;
+  }
+}
+
+
+@media (max-width: 483px) {
+  footer{
+    padding: 0.5em;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+
+
+@media (max-width: 728px) {
+  footer{
+      zoom: 0.78;
+  }
+}
+
