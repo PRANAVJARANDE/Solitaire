@@ -1,0 +1,39 @@
+.rules-container {
+    height:87.5vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    background-color: #2e8b57;
+    color: white;
+    font-size: 1.2em;
+    align-items: center;
+  }
+  
+  .rules-container h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.5em;
+  }
+  
+  .rules-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .rules-container li {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  .rules-container li::before {
+    content: "•";
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }

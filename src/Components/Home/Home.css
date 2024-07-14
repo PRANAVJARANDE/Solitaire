@@ -1,0 +1,139 @@
+#mainarea {
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    background-color: #2e8b57;
+    overflow: hidden;
+}
+
+#ubox {
+    padding-left: 6em;
+    padding-right: 6em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-bottom: 1.5em;
+}
+
+.stock{
+    display: flex;
+}
+
+.foundationcard{
+    display: flex;
+}
+
+#dbox {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 70px;  
+    height: 100px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    background-color: #2e8b57;
+}
+
+
+.container {
+    background-color: rgb(30, 156, 36);
+    min-height: 100px;
+    min-width: 70px;
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    position: relative;
+    border: 2px groove #000;
+    border-radius: 5px;
+}
+
+.containercard {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(25% * var(--index)));
+}
+
+.containercard:nth-child(1) {
+    --index: 0;
+}
+.containercard:nth-child(2) {
+    --index: 1;
+}
+.containercard:nth-child(3) {
+    --index: 2;
+}
+.containercard:nth-child(4) {
+    --index: 3;
+}
+.containercard:nth-child(5) {
+    --index: 4;
+}
+.containercard:nth-child(6) {
+    --index: 5;
+}
+.containercard:nth-child(7) {
+    --index: 6;
+}
+.containercard:nth-child(8) {
+    --index: 7;
+}
+.containercard:nth-child(9) {
+    --index: 8;
+}
+.containercard:nth-child(10) {
+    --index: 9;
+}
+.containercard:nth-child(11) {
+    --index: 10;
+}
+.containercard:nth-child(12) {
+    --index: 11;
+}
+.containercard:nth-child(13) {
+    --index: 12;
+}
+
+.covered{
+    width: 70px;  
+    height: 105px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-image: url(/assets/covered.png);
+    background-size: contain;
+}
+
+button{
+    padding: 0;
+    margin: 0;
+}
+
+#viewcardbox{
+    width: 75px;  
+    height: 110px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    color: white;
+    justify-content: center;
+    background-color: #2e8b57
+}
