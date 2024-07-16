@@ -14,10 +14,6 @@ const initialState = {
     invalidmoves:0,
     time:0,
     win:false,
-    best:{
-        moves:null,
-        time:null,
-    },
     start:false
 };
 
@@ -99,15 +95,6 @@ export const stateSlice=createSlice({
             state.stock=arr;
             state.view=state.stock[0];
             state.stock.shift();
-        },
-        setbest:(state,action)=>{
-            if(state.best.moves===null)
-            {
-                state.best.moves=action.payload.moves;
-                state.best.time=action.payload.time;
-            }
-            state.best.moves=Math.min(action.payload.moves,state.best.moves);
-            state.best.time=Math.min(action.payload.time,state.best.time);
         },
         setmoves:(state)=>{
             state.moves=0;

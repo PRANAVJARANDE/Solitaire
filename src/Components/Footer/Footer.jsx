@@ -8,7 +8,7 @@ const Footer = () => {
   let moves=useSelector((state)=>{return state.moves});
   let time=useSelector((state)=>{return state.time});
   let best=useSelector((state)=>{return state.best});
-  const [lbest,setlbest]=useState(best);
+  const [lbest,setlbest]=useState({moves:null,time:null});
 
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
@@ -16,12 +16,13 @@ const Footer = () => {
     return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
   };
 
-  useEffect(() => {
+  useEffect(()=>{
     const storedBest = JSON.parse(localStorage.getItem('best'));
-    if (storedBest) {
+    if(storedBest)
+    {
       setlbest(storedBest);
     }
-  }, []);
+  },[])
 
   useEffect(() => {
     let timer;
@@ -32,14 +33,6 @@ const Footer = () => {
     }
     return () => clearInterval(timer);
   }, [moves==0, dispatch]);
-
-
-  useEffect(() => {
-    if (best.moves !== null && best.time !== null) {
-      localStorage.setItem('best', JSON.stringify(best));
-      setlbest(best);
-    }
-  }, [best]);
 
   return (
     <footer>

@@ -2,7 +2,7 @@ import React, { useState ,useEffect} from 'react'
 import './Home.css'
 import Card from '../Card/Card'
 import { useSelector, useDispatch } from 'react-redux';
-import { clicked, initialize,togglestock,addmove,setwin, setbest,setmoves,starty} from '../../store/stateslice';
+import { clicked, initialize,togglestock,addmove,setwin,setmoves,starty} from '../../store/stateslice';
 import Win from '../Win/Win';
 
 
@@ -29,6 +29,22 @@ function Home() {
         if(foundations['H']===13 && foundations['D']===13 && foundations['S']===13 && foundations['C']===13)
         {
             dispatch(setwin());
+            const storedBest = JSON.parse(localStorage.getItem('best'));
+            if (storedBest) {
+                if(storedBest.moves>moves)
+                {
+                    storedBest.moves=moves;
+                }
+                if(storedBest.time>time)
+                {
+                    storedBest.time=time;
+                }
+                localStorage.setItem('best', JSON.stringify(storedBest));
+            }
+            else
+            {
+                localStorage.setItem('best', JSON.stringify({moves:moves,time:time}));
+            }
             dispatch(setbest({moves:moves,time:time}));
             dispatch(setmoves());
         }
